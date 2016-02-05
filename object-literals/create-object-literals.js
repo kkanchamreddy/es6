@@ -1,4 +1,4 @@
-"use esnext";
+"use strict";
 //regular es5 style
 function createPerson(fName, lName) {
   return {
@@ -10,6 +10,15 @@ function createPerson(fName, lName) {
 //es6 style - there should be a local variable with matching key name
 function createES6Person(fName, lName) {
   var firstName = fName, lastName = lName;
+
+  //combine with let variable
+  if(true) {
+    let firstName = 'Rob', lastName = 'John';
+    return {
+      firstName,
+      lastName
+    };
+  }
 
   return {
     firstName,

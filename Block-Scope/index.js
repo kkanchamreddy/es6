@@ -30,3 +30,14 @@ function hoistedLetValue(condition) {
 
 console.log('Hoisted value -- ',hoistedLetValue(true));
 console.log('unHoisted value -- ',hoistedLetValue(false));
+
+//Redeclaration error
+function redeclaration() {
+  var x = 10;
+
+  let x = 20// will cause an error
+
+  if() {
+    let x = 20 // this is in a differnt scope as the 'var x', so it just works fine.
+  }
+}

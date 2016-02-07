@@ -57,6 +57,10 @@ class SquareType extends RectangleType {
         // same as Rectangle.call(this, length, length)
         super(length, length);
     }
+
+    getArea() {
+      return super.getArea();
+    }
 }
 
 var sqrType = new SquareType(10);

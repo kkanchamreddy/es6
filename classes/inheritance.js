@@ -50,6 +50,10 @@ class RectangleType {
     getArea() {
         return this.length * this.width;
     }
+
+    static create(length, width) {
+      return new RectangleType(length, width);
+    }
 }
 
 class SquareType extends RectangleType {
@@ -64,7 +68,13 @@ class SquareType extends RectangleType {
 }
 
 var sqrType = new SquareType(10);
-console.log('sqr instanceof Square: ', sqrType instanceof SquareType);
-console.log('sqr instanceof Rectangle: ', sqrType instanceof RectangleType);
+var sqrType2 = SquareType.create(15,15);
+
+console.log('sqrType instanceof SquareType: ', sqrType instanceof SquareType);
+console.log('sqrType instanceof RectangleType: ', sqrType instanceof RectangleType);
 console.log('constructor', sqrType.constructor);
 console.log('Area of square is: ', sqrType.getArea());
+
+console.log('sqrType2 instanceof SquareType: ', sqrType2 instanceof SquareType);
+console.log('sqrType2 instanceof Rectangle: ', sqrType2 instanceof RectangleType);
+console.log('Area of square is: ', sqrType2.getArea());

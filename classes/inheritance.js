@@ -19,8 +19,10 @@ function Square(length, width) {
 }
 
 Square.prototype = Rectangle.prototype;
+Square.prototype.constructor = Square;
 
 var sqr = new Square(10, 10);
 console.log('sqr instanceof Square: ', sqr instanceof Square);
 console.log('sqr instanceof Rectangle: ', sqr instanceof Rectangle);
+console.log('constructor', sqr.constructor);
 console.log('Area of square is: ', sqr.getArea());

@@ -1,3 +1,5 @@
+'use strict';
+
 // built-in array behavior
 var colors = [];
 colors[0] = "red";
@@ -28,3 +30,14 @@ extendedColors.length = 0 //Try to remove all the elements
 
 //should be undefined but since inherting bulitin Arrays doesn't work as expected, we will still see 'red'
 console.log(extendedColors[0]);
+
+
+console.log('----- ES6 Style -------')
+class ES6MyArray extends Array {}
+
+var es6Colors = new ES6MyArray();
+es6Colors[0] = "red";
+console.log(es6Colors.length);         // 1
+
+es6Colors.length = 0;
+console.log(es6Colors[0]);             // undefined
